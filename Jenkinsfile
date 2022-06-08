@@ -38,5 +38,24 @@ pipeline{
      				sh 'cat /etc/passwd'
      			}
      		}
+             stage('parallel-job2'){
+                 parallel{
+                     stage('check'){
+                         steps{
+                             sh 'ps -ef'
+                         }
+                     }
+                     stage('calander'){
+                         steps{
+                             sh 'cal 2025'
+                         }
+                     }
+                     stage('lscpu'){
+                         steps{
+                             sh 'lscpu'
+                         }
+                     }
+                 }
+             }
      	}
      }

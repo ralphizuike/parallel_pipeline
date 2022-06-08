@@ -15,12 +15,12 @@ pipeline{
      				}
      				stage('sub-job2'){
      					steps{
-     						echo 'action2'
+     						sh 'systemctl status jenkins'
      					}
      				}
      				stage('sub-job3'){
      					steps{
-     						echo 'action3'
+     						sh 'ps -ef'
 
      					}
      				}

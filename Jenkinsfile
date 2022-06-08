@@ -55,6 +55,11 @@ pipeline{
                              sh 'lscpu'
                          }
                      }
+                     stage('jenkinsID'){
+                         steps{
+                             sh 'jenkins id'
+                         }
+                     }
                  }
              }
      	}

@@ -59,8 +59,9 @@ pipeline{
                          steps{
                              sh 'jenkins id'
                              sh 'ls'
-                         }
+                            }
                  }
              }
      	}
      }
+}
